@@ -1,0 +1,20 @@
+{% extends 'layout/jumbotron_base.html' %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block content %}
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">BLOG</h1>
+            <p>
+                Este es el <b>Sistema de Avisos</b> para uso interno de la empresa.<br>
+                Usted podrá crear, editar y comentar avisos siempre que sea un usuario registrado.
+            </p>
+            <p><a class="btn btn-primary btn-lg" href="{% url 'list_posts' %}" role="button">Entrar &raquo;</a></p>
+        </div>
+    </div>
+</main>
+{% endblock %}

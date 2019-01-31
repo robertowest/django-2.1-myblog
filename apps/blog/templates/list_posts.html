@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load post_extra %}
+
+{% block posts %}
+
+    <div class="row">
+        {% for post in posts %}
+            <div class="col-md-4">
+                <h5>{{ post.title }}</h5>
+                <span><span style='color: {{ post.published_date|color_por_fecha }};'>
+                    {{ post.published_date|cuando_se_publico }}</span> - {{ post.author }}</p>
+                <p>{{ post.text|texto_corto }} ...</p>
+                <p>Comentarios: {{ post.comments.count }}</p>
+                <p><a class="btn btn-secondary" href="{% url 'base_post' pk=post.pk %}" role="button">Leer post &raquo;</a></p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

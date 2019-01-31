@@ -1,0 +1,16 @@
+{% extends 'layout/jumbotron_base.html' %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block content %}
+<main role="main">
+    <div class="container">
+        <br>
+
+        {% block posts %}
+        {% endblock %}
+    </div>
+</main>
+{% endblock %}

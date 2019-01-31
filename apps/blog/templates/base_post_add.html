@@ -1,0 +1,24 @@
+{% extends 'layout/jumbotron_base.html' %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block content %}
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+            <div class="blog-post">
+
+                <h1 class="blog-post-title">New post</h1>
+
+                <form method="POST" class="post-form">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default">Save</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
